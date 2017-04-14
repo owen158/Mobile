@@ -1,0 +1,579 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>HTML5 Lobby</title>
+<link rel="stylesheet" type="text/css" media="screen" href="../game_play/mgcss/CSSreset.min.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="../game_play/mgcss/als_demo.css" />
+<script type="text/javascript" src="../game_play/mgjs/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../game_play/mgjs/jquery.als-1.7.min.js"></script>
+<script type="text/javascript" src="https://login.turnkey88.com/jswrapper/integration.js.php?casino=happypenguin88"></script>
+<script type="text/javascript">
+
+var mobiledomain = "tk176688.com";
+var systemidvar = "421";
+
+</script>
+<script type="text/javascript">
+
+$(document).ready(function() 
+{
+
+$("#demo1").als({
+	visible_items: 6,
+	scrolling_items: 6,
+	orientation: "horizontal",
+	circular: "no",
+	autoscroll: "no",
+        speed: 300
+});
+
+$("#demo2").als({
+	visible_items: 6,
+	scrolling_items: 6,
+	orientation: "horizontal",
+	circular: "no",
+	autoscroll: "no",
+        speed: 300
+});
+
+$("#demo3").als({
+	visible_items: 6,
+	scrolling_items: 6,
+	orientation: "horizontal",
+	circular: "no",
+	autoscroll: "no",
+        speed: 300
+});
+
+$("#new1").als({
+	visible_items: 6,
+	scrolling_items: 6,
+	orientation: "horizontal",
+	circular: "no",
+	autoscroll: "no",
+        speed: 300
+});
+
+$("#new2").als({
+	visible_items: 6,
+	scrolling_items: 6,
+	orientation: "horizontal",
+	circular: "no",
+	autoscroll: "no",
+        speed: 300
+});
+
+});
+
+</script>
+<script type="text/javascript">
+
+function getUrlVars() {
+
+var vars = {};
+var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+vars[key] = value;
+});
+return vars;
+
+}
+
+iapiSetCallout('GetTemporaryAuthenticationToken', calloutGetTemporaryAuthenticationToken);
+var mobile_src="/XPJ/";
+
+function askTempandLaunchGame(game) {
+
+currentgame = game;
+var realMode = 1;
+iapiRequestTemporaryToken(realMode, systemidvar, 'GamePlay');
+    $.ajax({
+        type:"post",
+        cache: false,
+        xhrFields:{withCredentials:true},
+        data:{gameType:"PT", gameID:currentgame, model:"mobile"},
+        url:"http://192.168.0.7:8080/XPJ/User/forwardGame",
+        success:function (data) {
+            if(data.msg == "error"){
+                alert("维护中、请稍后..")
+            }else if(data.type == "link"){
+                window.location.href = data.msg;
+            }
+        },
+        error:function () {
+            alert("维护中 || 请稍后...");
+            location.href = mobile_src+"/Mobile/index.html"
+        }
+    });
+}
+
+function launchMobileClient(temptoken) {
+var clientUrl = 'http://hub.' + mobiledomain + '/igaming/' + '?gameId=' + currentgame + '&real=1' + '&username=' + getUrlVars()["username"] + '&lang=' + document.getElementById("languageselect").gamelanguage.value + '&tempToken=' + temptoken + '&lobby=' + location.href.substring(0,location.href.lastIndexOf('/')+1) + 'lobby.html' + '&support=' + location.href.substring(0,location.href.lastIndexOf('/')+1) + 'support.html' + '&logout=' + location.href.substring(0,location.href.lastIndexOf('/')+1) + 'logout.html';
+document.location = clientUrl;
+}
+
+function calloutGetTemporaryAuthenticationToken(response) {
+
+if (response.errorCode) {
+alert("Token failed. " + response.playerMessage + " Error code: " + response.errorCode);
+}
+
+else {
+launchMobileClient(response.sessionToken.sessionToken);
+}
+
+}
+
+
+</script>
+</head>
+
+<body>
+<!-- <center>
+  <form id="languageselect">
+    <select name="gamelanguage" id="gamelanguage">
+      <option value="en">English (en)</option>
+      <option value="zh-cn">Simplified  Chinese (zh-cn)</option>
+      <option value="ch">Traditional Chinese (ch)</option>
+      <option value="ko">Korean (ko)</option>
+      <option value="es">Spanish (es)</option>
+      <option value="ja">Japanese (ja)</option>
+      <option value="ru">Russian (ru)</option>
+      <option value="it">Italian (it)</option>
+      <option value="fr">French (fr)</option>
+    </select>
+  </form>
+</center> -->
+<div class="als-container" id="demo1">
+ <!--  <center>
+    <b>MOST POPULAR GAMES</b>
+  </center> -->
+  <span class="als-prev"><img src="../images/thin_left_arrow_333.png" alt="prev" title="previous" /></span>
+  <div class="als-viewport">
+    <ul class="als-wrapper">
+      <a href="javascript:void(0)" onClick="askTempandLaunchGame('bib')">
+      <li class="als-item"><img src="../images/games/bib.png">Great Blue</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('ct')">
+      <li class="als-item"><img src="../images/games/ct.png">Captain Treasure</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('fm')">
+      <li class="als-item"><img src="../images/games/fm.png">Funky Monkey</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('hk')">
+      <li class="als-item"><img src="../images/games/hk.png">Highway Kings</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('zcjb')">
+      <li class="als-item"><img src="../images/games/zcjb.png">Zhao Cai Jin Bao</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('gos')">
+      <li class="als-item"><img src="../images/games/gos.png">Golden Tour</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('vcstd')">
+      <li class="als-item"><img src="../images/games/vcstd.png">Vacation Station Deluxe</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('eas')">
+      <li class="als-item"><img src="../images/games/eas.png">Easter Surprise</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('ges')">
+      <li class="als-item"><img src="../images/games/ges.png">Geisha Story</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('pgv')">
+      <li class="als-item"><img src="../images/games/pgv.png">Penguin Vacation</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('mgstk')">
+      <li class="als-item"><img src="../images/games/mgstk.png">Magical Stacks</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('ir2')">
+      <li class="als-item"><img src="../images/games/ir2.png">Iron Man 2</li>
+      </a>
+    </ul>
+  </div>
+  <span class="als-next"><img src="../images/thin_right_arrow_333.png" alt="next" title="next" /></span> </div>
+<div class="als-container" id="demo2"> <span class="als-prev"><img src="../images/thin_left_arrow_333.png" alt="prev" title="previous" /></span>
+  <div class="als-viewport">
+    <ul class="als-wrapper">
+      <a href="javascript:void(0)" onClick="askTempandLaunchGame('dnr')">
+      <li class="als-item"><img src="../images/games/dnr.png">Dolphin Reef</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('arc')">
+      <li class="als-item"><img src="../images/games/arc.png">Archer</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('bob')">
+      <li class="als-item"><img src="../images/games/bob.png">Bonus Bears</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('pmn')">
+      <li class="als-item"><img src="../images/games/pmn.png">Panther Moon</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('zctz')">
+      <li class="als-item"><img src="../images/games/zctz.png">Zhao Cai Tong Zi</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('sis')">
+      <li class="als-item"><img src="../images/games/sis.png">Silent Samurai</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('art')">
+      <li class="als-item"><img src="../images/games/art.png">Arctic Treasure</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('wlg')">
+      <li class="als-item"><img src="../images/games/wlg.png">Wu Long</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('hlk2')">
+      <li class="als-item"><img src="../images/games/hlk2.png">The Incredible Hulk</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('whk')">
+      <li class="als-item"><img src="../images/games/whk.png">White King</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('mobdt')">
+      <li class="als-item"><img src="../images/games/mobdt.png">Desert Treasure</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('ano')">
+      <li class="als-item"><img src="../images/games/ano.png">A Night Out</li>
+      </a>
+    </ul>
+  </div>
+  <span class="als-next"><img src="../images/thin_right_arrow_333.png" alt="next" title="next" /></span> </div>
+<div class="als-container" id="demo3"> <span class="als-prev"><img src="../images/thin_left_arrow_333.png" alt="prev" title="previous" /></span>
+  <div class="als-viewport">
+    <ul class="als-wrapper">
+      <a href="javascript:void(0)" onClick="askTempandLaunchGame('hf')">
+      <li class="als-item"><img src="../images/games/hf.png">Halloween Fortune</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('ssp')">
+      <li class="als-item"><img src="../images/games/ssp.png">Santa Surprise</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('cm')">
+      <li class="als-item"><img src="../images/games/cm.png">Chinese Kitchen</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('sib')">
+      <li class="als-item"><img src="../images/games/sib.png">Silver Bullet</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('tpd2')">
+      <li class="als-item"><img src="../images/games/tpd2.png">Thai Paradise</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('nian')">
+      <li class="als-item"><img src="../images/games/nian.png">Nian Nian You Yu</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('sx')">
+      <li class="als-item"><img src="../images/games/sx.png">Si Xiang</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('fcgz')">
+      <li class="als-item"><img src="../images/games/fcgz.png">Fei Cui Gong Zhu</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('samz')">
+      <li class="als-item"><img src="../images/games/samz.png">Secrets of the Amazon</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('ashfmf')">
+      <li class="als-item"><img src="../images/games/ashfmf.png">Full Moon Fortune</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('fxf')">
+      <li class="als-item"><img src="../images/games/fxf.png">Fortunes of the Fox</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('kkg')">
+      <li class="als-item"><img src="../images/games/kkg.png">King Kong</li>
+      </a>
+    </ul>
+  </div>
+  <span class="als-next"><img src="../images/thin_right_arrow_333.png" alt="next" title="next" /></span> </div>
+<div class="als-container" id="new1">
+  <center>
+    <b>NEW GAMES</b>
+  </center>
+  <span class="als-prev"><img src="../images/thin_left_arrow_333.png" alt="prev" title="previous" /></span>
+  <div class="als-viewport">
+    <ul class="als-wrapper">
+      <a href="javascript:void(0)" onClick="askTempandLaunchGame('ano')">
+      <li class="als-item"><img src="../images/games/ano.png">A Night Out</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('bs')">
+      <li class="als-item"><img src="../images/games/bs.png">Bai Shi</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('ashjcb')">
+      <li class="als-item"><img src="../images/games/ashjcb.png">Juicy Booty</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('sx')">
+      <li class="als-item"><img src="../images/games/sx.png">Si Xiang</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('zeus')">
+      <li class="als-item"><img src="../images/games/zeus.png">AOG Zeus</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('gtsaod')">
+      <li class="als-item"><img src="../images/games/gtsaod.png">Innocence Temptation</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('ashfmn')">
+      <li class="als-item"><img src="../images/games/ashfmn.png">Firemen</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('foy')">
+      <li class="als-item"><img src="../images/games/foy.png">Fountain of Youth</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('bib')">
+      <li class="als-item"><img src="../images/games/bib.png">Great Blue</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('hh')">
+      <li class="als-item"><img src="../images/games/hh.png">Haunted House</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('ashhwt')">
+      <li class="als-item"><img src="../images/games/ashhwt.png">Hawaiian Treasure</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('ashjut')">
+      <li class="als-item"><img src="../images/games/ashjut.png">Jungle Trouble</li>
+      </a>
+    </ul>
+  </div>
+  <span class="als-next"><img src="../images/thin_right_arrow_333.png" alt="next" title="next" /></span> </div>
+<div class="als-container" id="new2"> <span class="als-prev"><img src="../images/thin_left_arrow_333.png" alt="prev" title="previous" /></span>
+  <div class="als-viewport">
+    <ul class="als-wrapper">
+      <a href="javascript:void(0)" onClick="askTempandLaunchGame('ashjah')">
+      <li class="als-item"><img src="../images/games/ashjah.png">Jekyll and Hyde</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('lvb')">
+      <li class="als-item"><img src="../images/games/lvb.png">The Love Boat</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('zctz')">
+      <li class="als-item"><img src="../images/games/zctz.png">Zhao Cai Tong Zi</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('bt')">
+      <li class="als-item"><img src="../images/games/bt.png">Bermuda Triangle</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('ashctw')">
+      <li class="als-item"><img src="../images/games/ashctw.png">Catwalk</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('gtsdgk')">
+      <li class="als-item"><img src="../images/games/gtsdgk.png">Dragon Kingdom</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('lndg')">
+      <li class="als-item"><img src="../images/games/lndg.png">Land of Gold</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('nk')">
+      <li class="als-item"><img src="../images/games/nk.png">Neptune's Kingdom</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('ashndm')">
+      <li class="als-item"><img src="../images/games/ashndm.png">Nostradamus</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('pbro')">
+      <li class="als-item"><img src="../images/games/pbro.png">Pinball Roulette</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('ro_g')">
+      <li class="als-item"><img src="../images/games/ro_g.png">Premium Roulette</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('wkw')">
+      <li class="als-item"><img src="../images/games/wkw.png">Wacky Waters</li>
+      </a>
+    </ul>
+  </div>
+  <span class="als-next"><img src="../images/thin_right_arrow_333.png" alt="next" title="next" /></span> </div>
+<div class="als-container" id="new1">
+  <center>
+    <b>ALL GAMES</b>
+  </center>
+  <span class="als-prev"></span>
+  <div class="als-viewport">
+    <ul id="C_ontent" class="als-wrapper">
+      <a href="javascript:void(0)" onClick="askTempandLaunchGame('ash3brg')">
+      <li class="als-item"><img src="../images/games/ash3brg.png">3 Сard Brag </li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('ano')">
+      <li class="als-item"><img src="../images/games/ano.png">A Night Out</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('ashace')">
+      <li class="als-item"><img src="../images/games/ashace.png">Ace Ventura</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('ashadv')">
+      <li class="als-item"><img src="../images/games/ashadv.png">A Wonderland</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('zeus')">
+      <li class="als-item"><img src="../images/games/zeus.png">AOG Zeus</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('arc')">
+      <li class="als-item"><img src="../images/games/arc.png">Archer</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('ashwgaa')">
+      <li class="als-item"><img src="../images/games/ashwgaa.png">Arctic Adventure</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('art')">
+      <li class="als-item"><img src="../images/games/art.png">Arctic Treasure</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('gtsatq')">
+      <li class="als-item"><img src="../images/games/gtsatq.png">Atlantis Queen</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('baws')">
+      <li class="als-item"><img src="../images/games/baws.png">Baccarat</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('bs')">
+      <li class="als-item"><img src="../images/games/bs.png">Bai Shi</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('bl')">
+      <li class="als-item"><img src="../images/games/bl.png">Beach Life</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('bt')">
+      <li class="als-item"><img src="../images/games/bt.png">Bermuda Triangle</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('bjs')">
+      <li class="als-item"><img src="../images/games/bjs.png">BJ Switch</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('bob')">
+      <li class="als-item"><img src="../images/games/bob.png">Bonus Bears</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('ashbob')">
+      <li class="als-item"><img src="../images/games/ashbob.png">Bounty Beanstalk</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('cam')">
+      <li class="als-item"><img src="../images/games/cam.png">Captain America</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('ct')">
+      <li class="als-item"><img src="../images/games/ct.png">Captain Treasure</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('cheaa')">
+      <li class="als-item"><img src="../images/games/cheaa.png">Casino Hold'Em</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('ctiv')">
+      <li class="als-item"><img src="../images/games/ctiv.png">Cat in Vegas</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('catqc')">
+      <li class="als-item"><img src="../images/games/catqc.png">Cat Queen</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('ashctw')">
+      <li class="als-item"><img src="../images/games/ashctw.png">Catwalk</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('chl')">
+      <li class="als-item"><img src="../images/games/chl.png">Cherry Love</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('ashcpl')">
+      <li class="als-item"><img src="../images/games/ashcpl.png">Chests of Plenty</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('cm')">
+      <li class="als-item"><img src="../images/games/cm.png">Chinese Kitchen</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('gtscnb')">
+      <li class="als-item"><img src="../images/games/gtscnb.png">Cops Bandits</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('gtscbl')">
+      <li class="als-item"><img src="../images/games/gtscbl.png">Cowboys & Aliens</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('gtsdrdv')">
+      <li class="als-item"><img src="../images/games/gtsdrdv.png">Daring Dave</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('mobdt')">
+      <li class="als-item"><img src="../images/games/mobdt.png">Desert Treasure</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('dnr')">
+      <li class="als-item"><img src="../images/games/dnr.png">Dolphin Reef</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('dlm')">
+      <li class="als-item"><img src="../images/games/dlm.png">Dr Lovemore</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('gtsdgk')">
+      <li class="als-item"><img src="../images/games/gtsdgk.png">Dragon Kingdom</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('eas')">
+      <li class="als-item"><img src="../images/games/eas.png">Easter Surprise</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('esm')">
+      <li class="als-item"><img src="../images/games/esm.png">Esmeralda</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('mobro')">
+      <li class="als-item"><img src="../images/games/mobro.png">European Roulette</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('evj')">
+      <li class="als-item"><img src="../images/games/evj.png">Everybody's Jackpot</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('ashfta')">
+      <li class="als-item"><img src="../images/games/ashfta.png">Fairest Of Them All</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('fsf')">
+      <li class="als-item"><img src="../images/games/fsf.png">Fantastic Four</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('fcgz')">
+      <li class="als-item"><img src="../images/games/fcgz.png">Fei Cui Gong Zhu</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('ashfmn')">
+      <li class="als-item"><img src="../images/games/ashfmn.png">Firemen</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('fbr')">
+      <li class="als-item"><img src="../images/games/fbr.png">Football Rules</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('fow')">
+      <li class="als-item"><img src="../images/games/fow.png">Forest of Wonders</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('fxf')">
+      <li class="als-item"><img src="../images/games/fxf.png">Fortunes Fox</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('foy')">
+      <li class="als-item"><img src="../images/games/foy.png">Fountain of Youth</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('fdt')">
+      <li class="als-item"><img src="../images/games/fdt.png">Frankie Dettori’s</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('fdtjg')">
+      <li class="als-item"><img src="../images/games/fdtjg.png">Frankie Dettori’s JP</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('ashfmf')">
+      <li class="als-item"><img src="../images/games/ashfmf.png">Full Moon Fortune</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('fnfrj')">
+      <li class="als-item"><img src="../images/games/fnfrj.png">Funky Fruits</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('fff')">
+      <li class="als-item"><img src="../images/games/fff.png">Funky Fruits Farm</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('fm')">
+      <li class="als-item"><img src="../images/games/fm.png">Funky Monkey</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('ges')">
+      <li class="als-item"><img src="../images/games/ges.png">Geisha Story</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('glrj')">
+      <li class="als-item"><img src="../images/games/glrj.png">Gladiator JP</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('glg')">
+      <li class="als-item"><img src="../images/games/glg.png">Golden Games</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('gos')">
+      <li class="als-item"><img src="../images/games/gos.png">Golden Tour</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('bib')">
+      <li class="als-item"><img src="../images/games/bib.png">Great Blue</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('gro')">
+      <li class="als-item"><img src="../images/games/gro.png">Greatest Odyssey</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('hf')">
+      <li class="als-item"><img src="../images/games/hf.png">Halloween Fortune</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('hh')">
+      <li class="als-item"><img src="../images/games/hh.png">Haunted House</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('ashhwt')">
+      <li class="als-item"><img src="../images/games/ashhwt.png">Hawaiian Treasure</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('hk')">
+      <li class="als-item"><img src="../images/games/hk.png">Highway Kings</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('ir')">
+      <li class="als-item"><img src="../images/games/ir.png">Ice Run</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('gtsaod')">
+      <li class="als-item"><img src="../images/games/gtsaod.png">Innocence Temptation</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('ir2')">
+      <li class="als-item"><img src="../images/games/ir2.png">Iron Man 2</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('irmn3')">
+      <li class="als-item"><img src="../images/games/irmn3.png">Iron Man 3</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('jpgt')">
+      <li class="als-item"><img src="../images/games/jpgt.png">Jackpot Giant</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('jb_mh')">
+      <li class="als-item"><img src="../images/games/jb_mh.png">Jacks or Better</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('ashjah')">
+      <li class="als-item"><img src="../images/games/ashjah.png">Jekyll and Hyde</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('ashjcb')">
+      <li class="als-item"><img src="../images/games/ashjcb.png">Juicy Booty</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('ashjut')">
+      <li class="als-item"><img src="../images/games/ashjut.png">Jungle Trouble</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('kkg')">
+      <li class="als-item"><img src="../images/games/kkg.png">King Kong</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('lndg')">
+      <li class="als-item"><img src="../images/games/lndg.png">Land of Gold</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('ashlcl')">
+      <li class="als-item"><img src="../images/games/ashlcl.png">Leprechauns Luck </li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('ashlob')">
+      <li class="als-item"><img src="../images/games/ashlob.png">Life of Brian </li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('lm')">
+      <li class="als-item"><img src="../images/games/lm.png">Lotto Madness</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('mgstk')">
+      <li class="als-item"><img src="../images/games/mgstk.png">Magical Stacks</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('gtsmrln')">
+      <li class="als-item"><img src="../images/games/gtsmrln.png">Marilyn Monroe</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('spm')">
+      <li class="als-item"><img src="../images/games/spm.png">Monty Python's</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('mrcb')">
+      <li class="als-item"><img src="../images/games/mrcb.png">Mr.Cashback</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('bj_mh5')">
+      <li class="als-item"><img src="../images/games/bj_mh5.png">Multihand Blackjack</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('nk')">
+      <li class="als-item"><img src="../images/games/nk.png">Neptune's Kingdom</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('nian')">
+      <li class="als-item"><img src="../images/games/nian.png">Nian Nian You Yu</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('ashndm')">
+      <li class="als-item"><img src="../images/games/ashndm.png">Nostradamus</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('op')">
+      <li class="als-item"><img src="../images/games/op.png">Ocean Princess</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('pmn')">
+      <li class="als-item"><img src="../images/games/pmn.png">Panther Moon</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('pgv')">
+      <li class="als-item"><img src="../images/games/pgv.png">Penguin Vacation</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('bjp')">
+      <li class="als-item"><img src="../images/games/bjp.png">Perfect BJ</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('pst')">
+      <li class="als-item"><img src="../images/games/pst.png">Pharaoh's Secret</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('paw')">
+      <li class="als-item"><img src="../images/games/paw.png">Piggies and Wolf</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('pbro')">
+      <li class="als-item"><img src="../images/games/pbro.png">Pinball Roulette</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('pnp')">
+      <li class="als-item"><img src="../images/games/pnp.png">Pink Panther</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('gtspor')">
+      <li class="als-item"><img src="../images/games/gtspor.png">Plenty O`Fortune</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('ro_g')">
+      <li class="als-item"><img src="../images/games/ro_g.png">Premium Roulette</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('phot')">
+      <li class="als-item"><img src="../images/games/phot.png">Purple Hot</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('rky')">
+      <li class="als-item"><img src="../images/games/rky.png">Rocky</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('gtssmbr')">
+      <li class="als-item"><img src="../images/games/gtssmbr.png">Samba Brazil</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('ssp')">
+      <li class="als-item"><img src="../images/games/ssp.png">Santa Surprise</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('samz')">
+      <li class="als-item"><img src="../images/games/samz.png">Secrets of Amazon</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('shmst')">
+      <li class="als-item"><img src="../images/games/shmst.png">Sherlock Mystery</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('sx')">
+      <li class="als-item"><img src="../images/games/sx.png">Si Xiang</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('sis')">
+      <li class="als-item"><img src="../images/games/sis.png">Silent Samurai</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('sib')">
+      <li class="als-item"><img src="../images/games/sib.png">Silver Bullet</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('spidc')">
+      <li class="als-item"><img src="../images/games/spidc.png">Spider-Man</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('sol')">
+      <li class="als-item"><img src="../images/games/sol.png">Streak of Luck</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('cnpr')">
+      <li class="als-item"><img src="../images/games/cnpr.png">Sweet Party</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('tpd2')">
+      <li class="als-item"><img src="../images/games/tpd2.png">Thai Paradise</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('tht')">
+      <li class="als-item"><img src="../images/games/tht.png">Thai Temple</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('avng')">
+      <li class="als-item"><img src="../images/games/avng.png">The Avengers</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('ashglss')">
+      <li class="als-item"><img src="../images/games/ashglss.png">The Glass Slipper</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('hlk2')">
+      <li class="als-item"><img src="../images/games/hlk2.png">The Incredible Hulk</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('lvb')">
+      <li class="als-item"><img src="../images/games/lvb.png">The Love Boat</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('multm')">
+      <li class="als-item"><img src="../images/games/multm.png">Multiplier Madness</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('donq')">
+      <li class="als-item"><img src="../images/games/donq.png">Don Quixote</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('tmqd')">
+      <li class="als-item"><img src="../images/games/tmqd.png">Three Musketeers</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('trm')">
+      <li class="als-item"><img src="../images/games/trm.png">Thor</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('topg')">
+      <li class="als-item"><img src="../images/games/topg.png">Top Gun</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('ttc')">
+      <li class="als-item"><img src="../images/games/ttc.png">Top Trump Celebs</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('vcstd')">
+      <li class="als-item"><img src="../images/games/vcstd.png">Vacation Station</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('gts52')">
+      <li class="als-item"><img src="../images/games/gts52.png">Vikingmania</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('wkw')">
+      <li class="als-item"><img src="../images/games/wkw.png">Wacky Waters</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('whk')">
+      <li class="als-item"><img src="../images/games/whk.png">White King</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('gtswg')">
+      <li class="als-item"><img src="../images/games/gtswg.png">Wild Gambler</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('wis')">
+      <li class="als-item"><img src="../images/games/wis.png">Wild Spirit</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('gtswng')">
+      <li class="als-item"><img src="../images/games/gtswng.png">Wings of Gold</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('ashwnoz')">
+      <li class="als-item"><img src="../images/games/ashwnoz.png">Winnings of Oz </li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('wlg')">
+      <li class="als-item"><img src="../images/games/wlg.png">Wu Long</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('xmn50')">
+      <li class="als-item"><img src="../images/games/xmn50.png">X-Men 50 Lines </li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('zcjb')">
+      <li class="als-item"><img src="../images/games/zcjb.png">Zhao Cai Jin Bao</li>
+      </a> <a href="javascript:void(0)" onClick="askTempandLaunchGame('zctz')">
+      <li class="als-item"><img src="../images/games/zctz.png">Zhao Cai Tong Zi</li>
+      </a>
+    </ul>
+  </div>
+  <span class="als-next"></span> </div>
+</body>
+</html>

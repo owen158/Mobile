@@ -1,0 +1,37 @@
+.game .list {
+  width: 100%;
+  font-size: 0;
+  padding: 0 0.2rem;
+  box-sizing: border-box;
+  text-align: left;
+  min-height: 7rem;
+  vertical-align: top;
+  margin-bottom: 0.5rem;
+}
+.game .list li {
+  display: inline-block;
+  width: 33.333%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: top;
+  text-align: center;
+  height: 2.28rem;
+  overflow: hidden;
+  margin: 0.1rem 0;
+}
+.game .list li .img {
+  display: block;
+  width: 100%;
+  border-radius: 5%;
+  height: 2.28rem;
+}
+.game .enter {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 5;
+}

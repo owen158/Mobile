@@ -1,0 +1,251 @@
+#pageslo {
+  width: 100%;
+  font-size: 0;
+  height: 0.5rem;
+}
+#pageslo .total {
+  display: inline-block;
+  width: 30%;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  box-sizing: border-box;
+  font-size: 0.25rem;
+  padding-left: 0.1rem;
+  text-align: left;
+}
+#pageslo ul {
+  display: inline-block;
+  padding-right: 8%;
+  vertical-align: top;
+  width: 70%;
+  height: 0.5rem;
+  text-align: right;
+  box-sizing: border-box;
+}
+#pageslo li {
+  list-style: none;
+}
+#pageslo a {
+  text-decoration: none;
+  font-size: 0.25rem;
+}
+#pageslo .pagination {
+  position: relative;
+}
+#pageslo .pagination li {
+  display: inline-block;
+  vertical-align: top;
+  width: 0.5rem;
+  height: 0.5rem;
+}
+#pageslo .pagination li.lf {
+  width: 1rem;
+}
+#pageslo .pagination li.rt {
+  width: 1rem;
+}
+#pageslo .pagination li a {
+  text-align: center;
+  vertical-align: top;
+  display: block;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  background: #fff;
+  color: #0E90D2;
+}
+#pageslo .pagination li a:hover {
+  background: #eee;
+}
+#pageslo .pagination li.active a {
+  background: #0E90D2;
+  color: #fff;
+}
+.tabel {
+  width: 100%;
+  margin-top: 0.2rem;
+}
+.tabel thead {
+  width: 100%;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  border-bottom: 1px solid #bbb;
+}
+.tabel thead tr {
+  width: 100%;
+  height: 0.4rem;
+}
+.tabel thead tr th {
+  font-size: 0.2rem;
+}
+.tabel tbody {
+  width: 100%;
+}
+.tabel tbody tr {
+  height: 0.5rem;
+  border: 1px solid #bbb;
+}
+.tabel tbody tr td {
+  font-size: 0.2rem;
+  border: 1px solid #bbb;
+  line-height: 0.5rem;
+  text-align: center;
+  padding: 0 0.05rem;
+}
+.wrapper {
+  width: 100%;
+}
+.wrapper .wrapper_top {
+  width: 100%;
+  margin-top: 0.2rem;
+  font-size: 0;
+}
+.wrapper .wrapper_top div.buton {
+  margin-bottom: 0.2rem;
+}
+.wrapper .wrapper_top .vue-datepicker {
+  width: 60%;
+  display: inline-block;
+}
+.wrapper .wrapper_top .item {
+  width: 40%;
+  height: 1.2rem;
+  display: inline-block;
+  vertical-align: top;
+}
+.wrapper .wrapper_top .item .main {
+  display: inline-block;
+  width: 100%;
+  height: 0.5rem;
+}
+.wrapper .wrapper_top .item .main label {
+  display: inline-block;
+  width: 40%;
+  height: 0.5rem;
+  text-align: center;
+  line-height: 0.5rem;
+  font-size: 0.2rem;
+  vertical-align: top;
+}
+.wrapper .wrapper_top .item .main span {
+  display: inline-block;
+  width: 40%;
+  height: 0.5rem;
+  text-align: center;
+  line-height: 0.5rem;
+  font-size: 0.2rem;
+  vertical-align: top;
+}
+.wrapper .wrapper_top .item .main input {
+  width: 60%;
+  vertical-align: top;
+  padding-left: 0.1rem;
+  box-sizing: border-box;
+  border: 1px solid #bbb;
+  height: 0.5rem;
+  font-size: 0.2rem;
+}
+.wrapper .wrapper_top .item select {
+  width: 60%;
+  height: 0.5rem;
+}
+.wrapper .wrapper_top .item_rt {
+  width: 20%;
+  display: inline-block;
+  vertical-align: top;
+}
+.wrapper .wrapper_top .item_rt .main {
+  width: 100%;
+  height: 0.6rem;
+  padding-left: 0.1rem;
+  padding-right: 0.1rem;
+  box-sizing: border-box;
+  font-size: 0.2rem;
+}
+.wrapper .wrapper_top .item_rt .main .cx {
+  height: 0.6rem;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 0.2rem;
+}
+.content {
+  width: 100%;
+  height: 7rem;
+  box-sizing: border-box;
+  padding: 0 0.02rem;
+}
+.content .myhide {
+  height: 0.5rem;
+  line-height: 0.5rem;
+  width: 100%;
+  font-size: 0.2rem;
+}
+.nav-button {
+  width: 100%;
+  height: 0.8rem;
+  font-size: 0;
+}
+.nav-button .item {
+  display: inline-block;
+  font-size: 0.2rem;
+  line-height: 0.8rem;
+  vertical-align: top;
+}
+.nav-button span {
+  display: inline-block;
+  min-width: 0.4rem;
+}
+.nav-button .lt {
+  height: 0.8rem;
+  text-align: left;
+  width: 25%;
+}
+.nav-button .md {
+  width: 20%;
+}
+.nav-button .rt {
+  width: 55%;
+}
+.nav-button .rt .main {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  position: relative;
+}
+.nav-button .rt .main .sup,
+.nav-button .rt .main .sub {
+  position: absolute;
+  top: 0.15rem;
+  left: 10%;
+  background: #bbb;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  border-radius: 0.1rem;
+  color: #FFF;
+  width: 80%;
+}
+.nav-button .rt .main .sup img,
+.nav-button .rt .main .sub img {
+  vertical-align: top;
+  margin-top: 0.05rem;
+}
+.nav-button .rt .main .click_btn {
+  width: 80%;
+  margin: 0 auto;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  text-align: center;
+  border-radius: 0.1rem;
+  margin-top: 0.15rem;
+}
+.nav-button .rt .lf {
+  width: 25%;
+}
+.nav-button .rt .mf {
+  width: 35%;
+}
+.nav-button .rt .rf {
+  width: 25%;
+  vertical-align: top;
+}

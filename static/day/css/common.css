@@ -1,0 +1,522 @@
+*{padding:0;margin:0;}
+html,body{-webkit-tap-highlight-color:transparent;-webkit-user-select:none;overflow:hidden;}
+img,a,input,button,textarea,canvas,video,audio{display:block;text-decoration:none;border:none;outline:none;}
+
+/* 定义一个字体 */
+@font-face{font-family:'icomoon';src:url('fonts/icomoon.eot?7z3vf7');src:url('fonts/icomoon.eot?7z3vf7#iefix') format('embedded-opentype'),url('fonts/icomoon.svg?7z3vf7#icomoon') format('svg');font-weight:normal;font-style:normal;}
+
+/* 公共样式 */
+
+/* 首页样式头部样式 */
+
+.head{height:0.88rem;line-height:0.88rem;text-align:center;font-size:0.36rem;color:#ffffff;background:#e3cfab;position:absolute;top:0;left:0;width:100%;z-index:1;}
+
+/* 中部滚动区域 */
+.wrapper{position:absolute;top:0.88rem;bottom:0.98rem;left:0;right:0;overflow:hidden;z-index:1;}
+
+/* 滚动内容 */
+.scroller{position:absolute;top:0;left:0;z-index:1;-webkit-transform:translateZ(0px);width:100%;padding-bottom:0.1rem;}
+
+/* 脚步区域 */
+.footer{position:absolute;bottom:0;left:0;height:1rem;width:100%;z-index:1;background:#121212;}
+
+/* 底部导航区域 */
+.navbar{width:25%;float:left;height:100%;text-align:center;color:#666666;}
+
+/* 底部图标区域 */
+.navbar .icon,.navbar .desc{}
+.navbar .icon{font-family:'icomoon';font-size:0.4rem;margin-top:0rem;margin-bottom:0px;}
+.navbar .desc{font-size:0.2rem;letter-spacing:1px;}
+
+/* 点击被激活后 */
+.active{color:#e3cfab!important;}
+
+/* 清除浮动 */
+.clear{clear:both;}
+
+/* 加载区域loading */
+.loading{width:100%;position:absolute;top:0;left:0;z-index:2;height:0.1rem;}
+.loading1{width:0rem;height:100%;position:absolute;top:0;left:0;-webkit-animation:loading 10s infinite;background:#ffb93d;}
+@-webkit-keyframes loading{
+	0%{width:0;}
+	100%{width:100%;}
+}
+
+/* 遮罩是公共的类 */
+.overlay{position:absolute;top:0;left:0;width:100%;height:100vh;bottom:0;right:0;z-index:10;background:rgba(0,0,0,0.8);}
+.overlay1{position:absolute;top:0;left:0;width:100%;height:100vh;bottom:0;right:0;z-index:10;background:rgba(0,0,0,0.8);}
+
+/* 大型关闭按钮 */
+.close{position:absolute;font-size:0.5rem;color:#1f1f1f;font-family:"icomoon";z-index:111;right:0.1rem;top:0.2rem;}
+.close1{position:fixed;font-size:0.5rem;color:white;font-family:"icomoon";z-index:111;right:0.1rem;top:0.2rem;}
+.close2{position:fixed;font-size:0.5rem;color:#1f1f1f;font-family:"icomoon";z-index:111;right:0.1rem;top:1rem;}
+
+/* 公共页面全部结束 */
+
+/* 开始首页模块css */
+
+/* //首页样式 */
+
+/* 幻灯片轮播的样式 */
+
+.index_swiper,.index_swiper .swiper-slide{height:3.14rem;width:100%;}
+.index_swiper .swiper-slide img{width:100%;}
+
+/* //公告区域 */
+.index_notice{width:100%;height:0.44rem;line-height:0.44rem;font-size:0.2rem;color:#454545;background:#efefef;overflow:hidden;}
+
+/* 公告图标 */
+.index_notice img{float:left;width:0.48rem;height:0.17rem;margin-top:0.15rem;margin-left:0.2rem;}
+
+/* 公告文字区域 */
+.index_notice .text{float:right;width:6.64rem;height:0.3rem;line-height:0.3rem;font-size:0.2rem;color:#454545;margin-top:0.05rem;overflow:hidden;}
+.index_notice p{-webkit-animation:index_go 20s infinite linear;}
+@-webkit-keyframes index_go{
+	0%{-webkit-transform:translateX(6.64rem) translateZ(0px);}
+	100%{-webkit-transform:translateX(-6.64rem) translateZ(0px);}
+}
+
+/* 十字交互区域 */
+.index_ten{width:7.12rem;margin:auto;margin-top:0.52rem;}
+
+/* 名称 */
+.index_ten .title{margin:auto;width:100%;border-bottom:1px solid #e8e8e8;padding-bottom:5px;}
+
+/* 横向滚动区域 */
+.index_wrapper{position:relative;width:100%;overflow:hidden;height:2rem;}
+.index_scroller{position:absolute;left:0;top:0;-webkit-transform:translateZ(0px);}
+
+/* //圆形点击区域 */
+.index_tap{float:left;width:1.49rem;margin-right:0.36rem;text-align:center;font-size:0.24rem;color:#454545;margin-top:0.2rem;}
+.index_tap img{width:100%;margin-bottom:0.1rem;}
+
+/* 登录 css*/
+.login_container{position:absolute;top:0;left:0;bottom:0;right:0;z-index:100;background:#fafafa;width:100%;height:100%;}
+.login_title{height:0.9rem;line-height:0.9rem;text-align:center;font-size:0.48rem;border-bottom:1px solid #eeeeee;}
+.login_main{width:5.48rem;margin:auto;margin-top:0.2rem;}
+.login_error{width:100%;height:0.5rem;line-height:0.5rem;border-radius:1rem;background:rgba(240,232,217,0.7);text-align:center;font-size:0.24rem;color:#a19c93;letter-spacing:1px;margin-bottom:0.1rem;opacity:0;}
+
+/* 块状表单开始 */
+.login_block{width:100%;height:0.8rem;line-height:0.8rem;overflow:hidden;border:1px solid #e3cfab;margin-bottom:0.1rem;}
+.login_left{font-family:"icomoon";float:left;width:0.96rem;height:100%;line-height:0.8rem;color:white;font-size:0.5rem;background:#e3cfab;text-align:center;}
+.login_right{width:4.44rem;height:100%;margin-left:3px;float:left;}
+.login_right input{width:100%;height:100%;color:#373737;font-size:0.3rem;background:none;text-indent:0.1rem;}
+.login_right input::-webkit-input-placeholder{color:#d1d1d1;}
+.login_submit{height:0.78rem;line-height:0.78rem;text-align:center;background:#e3cfab;color:white;font-size:0.3rem;margin-top:0.5rem;}
+.login_change{height:0.78rem;line-height:0.78rem;text-align:center;border:1px solid #e3cfab;color:white;font-size:0.3rem;margin-top:0.2rem;color:#e3cfab;}
+.login_box{width:100%;height:0.3rem;margin-top:0.3rem;}
+.login_box input{float:left;width:0.3rem;height:0.3rem;}
+.login_box p{float:left;margin-left:0.1rem;font-size:0.24rem;color:#474747;line-height:0.3rem;}
+.login_box a{text-decoration:underline;margin-left:0.1rem;display:inline-block;color:#e3cfab;line-height:0.3rem;}
+
+/* 注册css */
+.register_container{position:absolute;top:0;left:0;bottom:0;right:0;z-index:100;background:#fafafa;width:100%;height:100%;}
+.register_title{height:0.9rem;line-height:0.9rem;text-align:center;font-size:0.48rem;border-bottom:1px solid #eeeeee;}
+.register_main{width:5.48rem;margin:auto;margin-top:0.2rem;}
+.register_error{width:100%;height:0.5rem;line-height:0.5rem;border-radius:1rem;background:rgba(240,232,217,0.7);text-align:center;font-size:0.24rem;color:#a19c93;letter-spacing:1px;margin-bottom:0.1rem;opacity:0;}
+
+/* 块状表单开始 */
+.register_block,.second_block1{width:100%;height:0.8rem;line-height:0.8rem;overflow:hidden;border:1px solid #e3cfab;margin-bottom:0.1rem;}
+.register_left,.second_left1{font-family:"icomoon";float:left;width:0.96rem;height:100%;line-height:0.8rem;color:white;font-size:0.5rem;background:#e3cfab;text-align:center;}
+.register_right,.second_right1{width:4.44rem;height:100%;margin-left:3px;float:left;}
+.register_right input,.second_right1 input{width:100%;height:100%;color:#373737;font-size:0.3rem;background:none;text-indent:0.1rem;}
+.register_right input::-webkit-input-placeholder,.second_right1 input::-webkit-input-placeholder{color:#d1d1d1;}
+.register_submit{height:0.78rem;line-height:0.78rem;text-align:center;background:#e3cfab;color:white;font-size:0.3rem;margin-top:0.5rem;}
+.register_change{height:0.78rem;line-height:0.78rem;text-align:center;border:1px solid #e3cfab;color:white;font-size:0.3rem;margin-top:0.2rem;color:#e3cfab;}
+.register_box{width:100%;height:0.3rem;margin-top:0.3rem;}
+.register_box input{float:left;width:0.3rem;height:0.3rem;}
+.register_box p{float:left;margin-left:0.1rem;font-size:0.24rem;color:#474747;line-height:0.3rem;}
+.register_box a{text-decoration:underline;margin-left:0.1rem;display:inline-block;color:#e3cfab;line-height:0.3rem;}
+#code img,#code input{
+	width:46.5%;
+	vertical-align: top;
+	height:0.8rem;
+	border: 0;margin: 0;padding: 0;
+	font-size: 0.3rem;
+	display: inline-block;
+}
+/* 弹出游戏转入转出的模块css */
+.deposite_container{border-radius:2px;background:#f9f9f9;width:6.74rem;height:5.9rem;position:absolute;left:0.4rem;top:2.94rem;z-index:1111111100;border-radius:5px;}
+.deposite_title{width:100%;height:1.02rem;line-height:1.02rem;text-align:center;font-size:0.48rem;letter-spacing:2px;color:#0d0d0d;border-bottom:1px solid #f0f0f0;}
+
+/* //整体区域 */
+.deposite_main{width:6.28rem;margin:auto;}
+.deposite_block{height:0.6rem;line-height:0.6rem;overflow:hidden;border-bottom:1px solid #f0f0f0;margin-top:0.2rem;}
+
+/* 列表 */
+.deposite_left,.deposite_right{font-size:0.24rem;color:#0d0d0d;letter-spacing:1px;}
+.deposite_left{float:left;}
+.deposite_right{float:right;}
+
+/* 转入的那个按钮 */
+.deposite_zr{float:left;width:3.1rem;height:0.8rem;border-radius:2px;background:#e5ceac;color:white;margin-top:0.3rem;font-size:0.4rem;line-height:0.79rem;text-align:center;}
+.deposite_zc{float:right;width:3.1rem;height:0.8rem;border-radius:2px;background:#e5ceac;color:white;margin-top:0.3rem;font-size:0.4rem;line-height:0.79rem;text-align:center;}
+.deposite_submit{width:100%;height:0.9rem;line-height:0.89rem;text-align:center;color:white;background:#e5ceac;border-radius:2px;font-size:0.36rem;margin-top:0.1rem;}
+
+/* 导航栏的第二个 */
+
+/* 最上面的title */
+
+.second_title{height:0.8rem;line-height:0.8rem;text-align:center;font-size:0.3rem;color:#575757;border-bottom:1px solid #e3cfab;}
+
+/* 左右浮动按钮 */
+.second_left,.second_right{float:left;width:50%;height:0.8rem;box-sizing:border-box;}
+
+/* 激活按钮 */
+.second_active{color:#e3cfab!important;border-bottom:4px solid #e3cfab!important;}
+
+/* 第二页整体容器 */
+.second_container{width:7.22rem;margin:auto;}
+
+/* ios选项卡 */
+.second_choose{margin-top:0.2rem;width:100%;height:0.68rem;line-height:0.68rem;text-align:center;color:#e3cfab;border-radius:3px;font-size:0.3rem;box-sizing:border-box;border:1px solid #e3cfab;overflow:hidden;}
+
+/* 选项卡的浮动 */
+.second_float{width:25%;float:left;color:#e3cfab;}
+.second_floatactive{background:#e3cfab!important;color:#ffffff!important;}
+
+/* 选项卡banenr轮播 */
+.second_container1{margin-top:0.3rem;}
+.second_container1,.second_container1 .swiper-slide{width:100%;}
+.second_block1{width:4rem;height:0.56rem;line-height:0.56rem;overflow:hidden;border:1px solid #e3cfab;margin:auto;margin-bottom:0.2rem;margin-top:0.3rem;}
+.second_left1{font-family:"icomoon";float:left;width:0.6rem;height:100%;line-height:0.56rem;color:white;font-size:0.4rem;background:#e3cfab;text-align:center;}
+.second_right1{width:3.13rem;height:100%;margin-left:3px;float:left;position:relative;}
+.second_right1 input{width:100%;height:100%;color:#373737;font-size:0.3rem;background:none;text-indent:0.1rem;}
+.second_right1 input::-webkit-input-placeholder{color:#d1d1d1;}
+
+/* 金额提交处 */
+.second_submit{width:4rem;height:0.6rem;line-height:0.6rem;text-align:center;border-radius:3px;background:#e3cfab;color:white;font-size:0.3rem;margin:auto;}
+
+/* 人工出款详细开关 */
+.second_see{width:4rem;height:0.6rem;line-height:0.6rem;text-align:center;border-radius:3px;border:1px solid #e3cfab;color:#e3cfab;font-size:0.3rem;margin:auto;margin-top:0.2rem;}
+
+/* 文字信息处 */
+.second_text1{text-align:center;color:#999999;margin-top:0.4rem;font-size:0.22rem;color:#a7a7a7;line-height:0.4rem;}
+
+/* 在线客服处 */
+.second_service{width:3.76rem;height:0.58rem;line-height:0.58rem;text-align:center;font-size:0.3rem;color:#c6bba9;border-radius:2px;border:1px solid #c6bba9;margin:auto;margin-top:0.2rem;-webkit-transition:all 0.5s;transition:all 0.5s;}
+.second_service:active{color:white;background:#e3cfab;}
+
+/* 银行下拉框 */
+.second_bank{position:absolute;top:0;left:0;width:100%;height:100%;z-index:2;opacity:0;}
+
+/* 取款列表 */
+.second_line{height:0.86rem;line-height:0.86rem;border-bottom:1px solid #efefef;font-size:0.3rem;box-sizing:border-box}
+
+/* 左侧标题 */
+.second_linel{color:#787878;float:left;margin-left:0.2rem;}
+.second_liner{float:right;margin-right:0.2rem;color:#454545;}
+
+/* 取款内容区域 */
+.second_qukc{width:7.12rem;margin:auto;margin-top:0.1rem;}
+.second_qksubmit{width:100%;height:0.86rem;line-height:0.86rem;text-align:center;color:white;background:#e3cfab;margin-top:0.3rem;font-size:0.4rem;}
+
+/* 验证错误信息的显示 */
+.second_error{height:0.5rem;line-height:0.5rem;font-size:0.24rem;color:white;background:rgba(227,207,171,0.8);border-radius:1rem;text-align:center;margin:auto;margin-top:0.1rem;width:4rem;opacity:0;}
+
+/*存款 二维码区域 */
+.second_er{display:none;}
+
+/* 二维码容器页面 */
+.second_ercontainer{position:absolute;width:3.2rem;z-index:100;top:1.7rem;left:2.2rem;text-align:center;}
+.second_ercontainer .title{text-align:center;color:#c3b78a;font-size:0.33rem;letter-spacing:1px;margin-bottom:0.05rem;}
+
+/* 二维码的那张图 */
+.second_ercontainer img{width:100%;}
+
+/* 二维码说明 */
+.second_ercontainer .border{width:0.22rem;height:1px;background:#e7d8a2;border-radius:100px;margin:auto;margin-top:0.3rem;margin-bottom:0.2rem;}
+.second_ercontainer .desc{font-size:0.24rem;color:#e7d8a2;line-height:0.4rem;}
+
+/* 线形图标说明 */
+.second_img{position:absolute;width:5.6rem;left:0.94rem;z-index:9999;}
+
+/* 人工出款的账户信息 */
+.second_personlist{overflow:hidden;width:4.4rem;margin:auto;border:1px solid #ececec;margin-top:0.6rem;}
+.second_personlist1{height:0.6rem;border-bottom:1px solid #f4f4f4;color:#717171;font-size:0.22rem;line-height:0.6rem;}
+.second_personl{float:left;margin-left:0.2rem;}
+.second_personr{float:right;margin-right:0.2rem;}
+
+/* //人工出款的详细信息 是弹框 */
+.second_show{position:fixed;z-index:9999;background:white;top:0.88rem;left:0;bottom:0.98rem;width:100%;display:none;}
+
+/* 我的内容 */
+
+/* 头部高斯模糊 */
+
+.my_head{height:2.06rem;width:100%;background:url(../images/my/mybg.jpg);background-size:100% 100%;position:relative;overflow:hidden;}
+
+/* 头像 */
+.my_head img{float:left;width:1.42rem;height:1.42rem;margin-top:0.36rem;margin-left:0.2rem;}
+.my_name{float:left;margin-top:0.68rem;margin-left:0.16rem;}
+.my_name .title{color:#c9cacb;font-size:0.2rem;margin-bottom:0.05rem;}
+.my_name .name{font-size:0.36rem;color:white;}
+
+/* 中心钱包的余额 */
+.my_money{float:right;margin-right:0.2rem;margin-top:0.6rem;}
+
+/* 中心钱包的title */
+.my_money .title{color:#c9cacb;font-size:0.2rem;margin-bottom:0.14rem;}
+.my_money .name{color:white;font-size:0.36rem;margin-bottom:0.14rem;width:1.5rem;overflow:hidden;float:left;}
+.my_money span{float:left;font-size:0.3rem;margin-top:0.05rem;font-family:"icomoon";color:white;}
+
+/* 中心钱包和账户中心隔着一条线 */
+.my_border{float:left;height:0.77rem;width:2px;background:#536877;margin-top:0.6rem;margin-left:1rem;opacity:0.2;}
+
+/* 整体大容器 */
+.my_container{margin-left:0.2rem;margin-right:0.2rem;margin-top:0.2rem;}
+
+/* 列表开始 */
+.my_container .list{border-bottom:1px solid #e2e2e2;padding-bottom:0.15rem;position:relative;}
+.my_container .list .title{font-size:0.24rem;color:#272727;margin-bottom:0.1rem;margin-left:0.1rem;}
+
+/* 三角形 */
+.sanjiao{width:0;height:0;border-left:0.1rem solid transparent;border-right:0.1rem solid transparent;border-top:0.1rem solid #272727;display:inline-block;position:relative;top:-3px;}
+.my_container .list .content{position:relative;font-size:0.36rem;color:#272727;}
+
+/* 浮动结束 */
+.my_float{width:33.3%;float:left;position:relative;}
+
+/* 提交按钮 */
+.my_button{font-size:0.3rem;color:white;background:#e3cfab;border-radius:1px;width:2rem;height:0.6rem;line-height:0.6rem;font-size:0.3rem;background:#e3cfab;border-radius:2px;margin-top:0.16rem;margin-left:0.4rem;}
+.my_container select{position:absolute;top:0.5rem;left:0;width:100%;height:100%;z-index:100;}
+
+/* 我的那些资料的列表 */
+.my_list{height:0.74rem;line-height:0.74rem;font-size:0.28rem;color:#505050;position:relative;border-bottom:1px solid #fafafa;}
+.my_list .title{float:left;font-family:"icomoon";font-size:0.5rem;color:#e3cfab;}
+.my_list .title p{display:inline-block;font-size:0.32rem;position:relative;top:-0.12rem;left:-0.14rem;color:#27241e;}
+.my_list .arrow{float:right;font-family:"icomoon";}
+
+/* //刷新按钮 */
+
+/* 公共部分 等待容器 */
+
+.wait{display:none;}
+.spinner{width:60px;height:60px;position:relative;margin:100px auto;position:absolute;top:0;left:0;right:0;bottom:0;margin:auto;z-index:12312321999;}
+.double-bounce1,.double-bounce2{width:100%;height:100%;border-radius:50%;background-color:#e3cfab;opacity:0.6;position:absolute;top:0;left:0;-webkit-animation:bounce 2.0s infinite ease-in-out;animation:bounce 2.0s infinite ease-in-out;}
+.double-bounce2{-webkit-animation-delay:-1.0s;animation-delay:-1.0s;}
+@-webkit-keyframes bounce{
+	0%,100%{-webkit-transform:scale(0.0)}
+	50%{-webkit-transform:scale(1.0)}
+}
+@keyframes bounce{
+	0%,100%{transform:scale(0.0);-webkit-transform:scale(0.0);}
+	50%{transform:scale(1.0);-webkit-transform:scale(1.0);}
+}
+
+/* 我的部分 修改栏目 会员资料 */
+.member_container{position:absolute;top:0;left:0;bottom:0;right:0;z-index:100;background:#fafafa;width:100%;height:100%;}
+.member_title{height:0.8rem;line-height:0.8rem;text-align:center;font-size:0.36rem;border-bottom:1px solid #eeeeee;background:#e3cfab;color:white;position:relative;}
+.member_main{width:5.48rem;margin:auto;margin-top:0.2rem;}
+.member_error{width:100%;height:0.5rem;line-height:0.5rem;border-radius:1rem;background:rgba(240,232,217,0.7);text-align:center;font-size:0.24rem;color:#a19c93;letter-spacing:1px;margin-bottom:0.1rem;opacity:0;}
+.member_block{width:100%;height:0.8rem;line-height:0.8rem;overflow:hidden;border:1px solid #e3cfab;margin-bottom:0.1rem;}
+.member_left{font-family:"icomoon";float:left;width:0.96rem;height:100%;line-height:0.8rem;color:white;font-size:0.5rem;background:#e3cfab;text-align:center;}
+.member_right{width:4.44rem;height:100%;margin-left:3px;float:left;}
+.member_right input{width:100%;height:100%;color:#373737;font-size:0.3rem;background:none;text-indent:0.1rem;}
+.member_right input::-webkit-input-placeholder{color:#d1d1d1;}
+.member_submit{height:0.78rem;line-height:0.78rem;text-align:center;background:#e3cfab;color:white;font-size:0.3rem;margin-top:0.5rem;}
+.member_change{height:0.78rem;line-height:0.78rem;text-align:center;border:1px solid #e3cfab;color:white;font-size:0.3rem;margin-top:0.2rem;color:#e3cfab;}
+.member_box{width:100%;height:0.3rem;margin-top:0.3rem;}
+.member_box input{float:left;width:0.3rem;height:0.3rem;}
+.member_box p{float:left;margin-left:0.1rem;font-size:0.24rem;color:#474747;line-height:0.3rem;}
+.member_box a{text-decoration:underline;margin-left:0.1rem;display:inline-block;color:#e3cfab;line-height:0.3rem;}
+
+/* 会员资料中的在线客服 */
+.member_service{height:0.78rem;line-height:0.78rem;text-align:center;border:1px solid #e3cfab;color:#e3cfab;font-size:0.3rem;margin-top:0.1rem;border-radius:2px;}
+
+/* 登录后出现在线客服 */
+.member_hide{display:none;}
+.member_hide p{font-size:0.24rem;color:#383838;text-align:center;margin-top:0.3rem;margin-bottom:0.1rem;}
+
+/* 银行卡信息页面 */
+.bank_container{position:absolute;top:0;left:0;bottom:0;right:0;z-index:100;background:#fafafa;width:100%;height:100%;}
+.bank_title{height:0.8rem;line-height:0.8rem;text-align:center;font-size:0.36rem;border-bottom:1px solid #eeeeee;background:#e3cfab;color:white;position:relative;}
+.bank_main{width:5.48rem;margin:auto;margin-top:0.2rem;}
+.bank_error{width:100%;height:0.5rem;line-height:0.5rem;border-radius:1rem;background:rgba(240,232,217,0.7);text-align:center;font-size:0.24rem;color:#a19c93;letter-spacing:1px;margin-bottom:0.1rem;opacity:0;}
+.bank_block{width:100%;height:0.8rem;line-height:0.8rem;overflow:hidden;border:1px solid #e3cfab;margin-bottom:0.1rem;}
+.bank_left{font-family:"icomoon";float:left;width:0.96rem;height:100%;line-height:0.8rem;color:white;font-size:0.5rem;background:#e3cfab;text-align:center;}
+.bank_right{width:4.44rem;height:100%;margin-left:3px;float:left;position:relative;}
+.bank_right select{position:absolute;width:100%;height:100%;top:0;left:0;z-index:999;opacity:0;}
+.bank_right input{width:100%;height:100%;color:#373737;font-size:0.3rem;background:none;text-indent:0.1rem;}
+.bank_right input::-webkit-input-placeholder{color:#d1d1d1;}
+.bank_submit{height:0.78rem;line-height:0.78rem;text-align:center;background:#e3cfab;color:white;font-size:0.3rem;margin-top:0.5rem;}
+.bank_change{height:0.78rem;line-height:0.78rem;text-align:center;border:1px solid #e3cfab;color:white;font-size:0.3rem;margin-top:0.2rem;color:#e3cfab;}
+.bank_box{width:100%;height:0.3rem;margin-top:0.3rem;}
+.bank_box input{float:left;width:0.3rem;height:0.3rem;}
+.bank_box p{float:left;margin-left:0.1rem;font-size:0.24rem;color:#474747;line-height:0.3rem;}
+.bank_box a{text-decoration:underline;margin-left:0.1rem;display:inline-block;color:#e3cfab;line-height:0.3rem;}
+
+/* 会员资料中的在线客服 */
+.bank_service{height:0.78rem;line-height:0.78rem;text-align:center;border:1px solid #e3cfab;color:#e3cfab;font-size:0.3rem;margin-top:0.1rem;border-radius:2px;}
+
+/* 登录后出现在线客服 */
+.bank_hide{display:none;}
+.bank_hide p{font-size:0.24rem;color:#383838;text-align:center;margin-top:0.3rem;margin-bottom:0.1rem;}
+
+/* 我的修改密码 */
+.password_container{position:absolute;top:0;left:0;bottom:0;right:0;z-index:100;background:#fafafa;width:100%;height:100%;}
+.password_title{height:0.8rem;line-height:0.8rem;text-align:center;font-size:0.36rem;border-bottom:1px solid #eeeeee;background:#e3cfab;color:white;position:relative;}
+.password_main{width:5.48rem;margin:auto;margin-top:0.2rem;}
+.password_error{width:100%;height:0.5rem;line-height:0.5rem;border-radius:1rem;background:rgba(240,232,217,0.7);text-align:center;font-size:0.24rem;color:#a19c93;letter-spacing:1px;margin-bottom:0.1rem;opacity:0;}
+.password_block{width:100%;height:0.8rem;line-height:0.8rem;overflow:hidden;border:1px solid #e3cfab;margin-bottom:0.1rem;}
+.password_left{font-family:"icomoon";float:left;width:0.96rem;height:100%;line-height:0.8rem;color:white;font-size:0.5rem;background:#e3cfab;text-align:center;}
+.password_right{width:4.44rem;height:100%;margin-left:3px;float:left;position:relative;}
+.password_right select{position:absolute;width:100%;height:100%;top:0;left:0;z-index:999;opacity:0;}
+.password_right input{width:100%;height:100%;color:#373737;font-size:0.3rem;background:none;text-indent:0.1rem;}
+.password_right input::-webkit-input-placeholder{color:#d1d1d1;}
+.password_submit{height:0.78rem;line-height:0.78rem;text-align:center;background:#e3cfab;color:white;font-size:0.3rem;margin-top:0.5rem;}
+.password_change{height:0.78rem;line-height:0.78rem;text-align:center;border:1px solid #e3cfab;color:white;font-size:0.3rem;margin-top:0.2rem;color:#e3cfab;}
+.password_box{width:100%;height:0.3rem;margin-top:0.3rem;}
+.password_box input{float:left;width:0.3rem;height:0.3rem;}
+.password_box p{float:left;margin-left:0.1rem;font-size:0.24rem;color:#474747;line-height:0.3rem;}
+.password_box a{text-decoration:underline;margin-left:0.1rem;display:inline-block;color:#e3cfab;line-height:0.3rem;}
+
+/* 会员资料中的在线客服 */
+.password_service{height:0.78rem;line-height:0.78rem;text-align:center;border:1px solid #e3cfab;color:#e3cfab;font-size:0.3rem;margin-top:0.1rem;border-radius:2px;}
+
+/* 登录后出现在线客服 */
+.password_hide{display:none;}
+.password_hide p{font-size:0.24rem;color:#383838;text-align:center;margin-top:0.3rem;margin-bottom:0.1rem;}
+
+/* 转账记录 */
+.deposite_data_container,.ck_data_container,.tk_data_container,.yh_data_container,.bankshow_container{width:100%;position:absolute;top:0;left:0;right:0;bottom:0;z-index:1000;background:white;}
+
+/* 转账记录的总体容器 */
+.deposite_data_container .wrapper,.ck_data_container .wrapper,.tk_data_container .wrapper,.yh_data_container .wrapper,.bankshow_container .wrapper{position:absolute;top:0.8rem;bottom:0;left:0;right:0;z-index:999;}
+
+/* 转账记录的滚动容器 */
+.deposite_data_container .scroller,.ck_data_container .scroller,.tk_data_container .scroller,.yh_data_container .scroller,.bankshow_container .scroller{position:absolute;top:0;left:0;-webkit-transform:translateZ(0px);z-index:1000;}
+
+/* 名称名字 */
+.deposite_data_container .title,.ck_data_container .title,.yh_data_container .title,.tk_data_container .title,.bankshow_container .title{height:0.8rem;text-align:center;font-size:0.36rem;line-height:0.8rem;position:relative;color:white;background:#e3cfab;}
+.arrow1,.arrow2{position:absolute;font-size:0.4rem;color:white;left:0.1rem;top:0.02rem;z-index:100;font-family: "icomoon";-webkit-transform:rotate(-180deg);}
+/* 卡片式浮动 */
+.cardnew{
+	width: 7.10rem;
+	height: 2.86rem;
+	background: white;
+	border-radius: 2px;
+	margin: auto;
+	margin-top: 0.2rem;
+	box-sizing: border-box;
+	padding: 0.26rem;
+	position: relative;
+	box-shadow: 0px 0px 5px #f5f5f5;
+}
+/* 订单号标题 */
+.cardnew .title1
+{
+	font-size: 0.34rem;
+	color: #1d1d1d;
+	letter-spacing: 1px;
+	margin-bottom: 0.5rem;
+}
+/* 浮动标题 */
+.cardnew .float1{
+	width: 33.3%;
+	float: left;
+	text-align: center;
+
+
+}
+/* //浮动小标题 */
+.cardnew .float1 .little
+{
+	font-size: 0.24rem;
+	color: #d8d8d8;
+	margin-bottom: 0.1rem;
+}
+/* 浮动大标题 */
+.cardnew .float1 .big{
+	font-size: 0.3rem;
+	color: #1d1d1d;
+
+}
+/* 浮动日期 */
+.cardnew .date{
+	position: absolute;
+	font-size: 0.28rem;
+	color: #9e9e9e;
+	z-index: 1000;
+	bottom: 0.26rem;
+	right: 0.4rem;
+}
+.cardnew .bottom
+{
+	position: absolute;
+	right: 0.3rem;
+	bottom: 0.2rem;
+	z-index: 9999;
+	font-size: 0.34rem;
+	color: #272727;
+}
+.cardnew .bottom p
+{
+	float: left;
+	margin-left: 0.3rem;
+
+}
+.cardnew .bottom .delete
+{
+	opacity: 0.3;
+}
+/* 银行卡的加号 */
+ .plus{
+	position: absolute;
+	top: 0rem;
+	right: 0.3rem;
+	color: #ffffff;
+	z-index: 11111;
+	font-size: 0.6rem;
+}
+/* 银行图片 */
+.bankpic
+{
+width: 1.9rem;
+height: 0.5rem;
+margin-bottom: 0.3rem;
+}
+/* 加载更多的 */
+.deposite_data_container .more,.ck_data_container .more,.tk_data_container .more,.yh_data_container .more,.bankshow_container .more{height:0.7rem;text-align:center;font-size:0.3rem;color:#dedede;margin-top:0.3rem;}
+
+/* 优惠 */
+.benefit_container{width:100%;position:absolute;top:0;left:0;right:0;bottom:0;z-index:1000;background:white;}
+
+/* 转账记录的总体容器 */
+.benefit_container .wrapper{position:absolute;top:0.8rem;bottom:0;left:0;right:0;z-index:999;background:#121212;}
+
+/* 转账记录的滚动容器 */
+.benefit_container .scroller{position:absolute;top:0;left:0;-webkit-transform:translateZ(0px);z-index:1000;}
+
+/* 名称名字 */
+.benefit_container .title{height:0.8rem;text-align:center;font-size:0.36rem;line-height:0.8rem;position:relative;color:white;background:#e3cfab;position:relative;}
+
+/* 列表头 */
+
+/* 块状 */
+
+.benefit_container .text{width:100%;margin:auto;}
+.benefit_container .text img{width:100%;}
+
+/* //显示优惠信息 */
+.showbenefit_container .close3{position:absolute;font-size:0.5rem;color:#1f1f1f;font-family:"icomoon";z-index:111;right:0.1rem;top:0rem;}
+.showbenefit_container{position:absolute;width:6.5rem;height:8.54rem;z-index:999999999999;background:#f9f9f9;top:2.12rem;left:0.52rem;}
+.showbenefit_container .title{height:0.8rem;line-height:0.8rem;text-align:center;color:#0f0f0f;font-size:0.36rem;border-bottom:1px solid #dadada;position:relative}
+.showbenefit_container .wrapper{overflow:hidden;position:absolute;top:0.8rem;bottom:2rem;left:0rem;right:0rem;z-index:1;}
+.showbenefit_container .scroller{position:absolute;top:0;left:0;z-index:1;-webkit-transform:translateZ(0px);}
+
+/* 内容区域容器 */
+.showbenefit_container .maincontainer{width:5.9rem;margin:auto;}
+
+/* 内容信息开始 */
+.showbenefit_container .bentitle{height:0.4rem;line-height:0.4rem;font-size:0.3rem;color:#3f3f3f;position:relative;margin-bottom:0.25rem;margin-top:0.3rem;}
+.showbenefit_container .border{float:left;width:5px;background:#3f3f3f;margin-right:0.1rem;height:100%;}
+.showbenefit_container .info{font-size:0.26rem;color:#0f0f0f;line-height:0.6rem;}
+
+/* 在线客服 */
+.showbenefit_container .service{height:0.76rem;line-height:0.76rem;text-align:center;font-size:0.36rem;color:white;background:#e3cfab;position:absolute;width:5.9rem;left:0.3rem;right:0.3rem;bottom:0.3rem;z-index:1;}
+
+/* //幻灯片轮播的白点 */
+.dot{position:absolute;text-align:center;z-index:1000;bottom:-0.1rem;right:0.1rem;}
+.swiper-pagination-switch{display:inline-block;width:0.1rem;height:0.1rem;background:#e3cfab;border-radius:100%;margin-right:0.05rem;opacity:0.6;}
+.swiper-active-switch{opacity:1;    /* Specific active button style: */}
